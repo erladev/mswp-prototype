@@ -12,6 +12,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you
 change any of the source files.
 
+## ChatGPT Integration
+
+To call the API there is the server.js in the src directory.  
+Start the server with `node server.js`.
+Before it is necessary to add the following environment variable:  
+`export OPENAI_API_KEY='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'`
+
+Please make the API requests only when necessary as it costs per request.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also
