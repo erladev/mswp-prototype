@@ -9,7 +9,7 @@ app.get('/assistant/:message', (req, res) => {
   const message = req.params.message;
   callOpenai(message).then(result => {
     console.log('result', result);
-    res.send(`Got following result: ${result.message.content}`)
+    res.send(JSON.stringify({message: result.message.content}));
   }).catch(error => {
     console.log(error);
   })
