@@ -7,4 +7,9 @@ import {Component} from '@angular/core';
 })
 export class RiskAssesmentComponent {
 
+  showIssues = false; // Add this line
+
+  toggleIssues() { // Add this method
+    this.showIssues = !this.showIssues;
+  }
 }

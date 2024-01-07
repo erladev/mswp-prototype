@@ -1,1 +1,192 @@
-<p>risk-assesment works!</p>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Risk Assessment Matrix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    td.low {
+      background-color: #90EE90;
+    }
+
+    /* Light Green */
+    td.low-med {
+      background-color: #FFFF99;
+    }
+
+    /* Light Yellow */
+    td.medium {
+      background-color: #FFD700;
+    }
+
+    /* Gold */
+    td.med-hi {
+      background-color: #FFA07A; /* LightSalmon */
+    }
+
+    /* Orange */
+    td.high {
+      background-color: #B22222; /* FireBrick */
+    }
+
+    /* OrangeRed */
+  </style>
+</head>
+<body>
+<h2>Risk Assessment Matrix</h2>
+<table>
+  <tr>
+    <th rowspan="2" style="width: 30px; height: 50px;">Likelihood</th>
+    <th colspan="5" style="height: 50px;">Severity</th>
+  </tr>
+  <tr>
+    <th style="width: 50px; height: 50px;">Negligible</th>
+    <th style="width: 50px; height: 50px;">Minor</th>
+    <th style="width: 50px; height: 50px;">Moderate</th>
+    <th style="width: 50px; height: 50px;">Significant</th>
+    <th style="width: 50px; height: 50px;">Severe</th>
+  </tr>
+  <tr>
+    <td style="height: 50px;">Very Likely</td>
+    <td class="low"></td>
+    <td class="low-med"></td>
+    <td class="medium"></td>
+    <td class="med-hi"></td>
+    <td class="high"><button class="circle-button">1</button></td>
+  </tr>
+  <tr>
+    <td style="height: 50px;">Likely</td>
+    <td class="low"></td>
+    <td class="low-med"></td>
+    <td class="medium"><button class="circle-button">3</button></td>
+    <td class="med-hi"></td>
+    <td class="high"><button class="circle-button">2</button></td>
+  </tr>
+  <tr>
+    <td style="height: 50px;">Possible</td>
+    <td class="low"></td>
+    <td class="low-med"></td>
+    <td class="medium"></td>
+    <td class="med-hi"><button class="circle-button">4</button></td>
+    <td class="med-hi"><button class="circle-button">5</button></td>
+  </tr>
+  <tr>
+    <td style="height: 50px;">Unlikely</td>
+    <td class="low"></td>
+    <td class="low-med"></td>
+    <td class="medium"><button class="circle-button">6</button></td>
+    <td class="medium"></td>
+    <td class="med-hi"></td>
+  </tr>
+  <tr>
+    <td style="height: 50px;">Very Unlikely</td>
+    <td class="low"></td>
+    <td class="low"><button class="circle-button">7</button></td>
+    <td class="low-med"></td>
+    <td class="medium"></td>
+    <td class="medium"></td>
+  </tr>
+</table>
+
+
+<br>
+<div class="legend">
+  <div><span class="low"></span> Low Risk</div>
+  <div><span class="low-med"></span> Low-Medium Risk</div>
+  <div><span class="medium"></span> Medium Risk</div>
+  <div><span class="med-high"></span> Medium-High Risk</div>
+  <div><span class="high"></span> High Risk</div>
+</div>
+
+<button (click)="toggleIssues()" class="see-issues-button">See Issues</button>
+
+
+<div [hidden]="!showIssues" class="issues">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Description</th>
+      <th>Action</th>
+      <th>Likelihood</th>
+      <th>Severity</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Unsecured WiFi</td>
+      <td>Implement secure WiFi protocols</td>
+      <td>Very Likely</td>
+      <td>Severe</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Insufficient backup procedures</td>
+      <td>Implement robust backup strategy</td>
+      <td>Likely</td>
+      <td>Severe</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Software vulnerabilities</td>
+      <td>Apply security patches</td>
+      <td>Likely</td>
+      <td>Moderate</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Availability issues</td>
+      <td>Improve server uptime</td>
+      <td>Possible</td>
+      <td>Significant</td>
+    </tr>
+    <!-- Additional Issues -->
+    <tr>
+      <td>5</td>
+      <td>Hardware failures</td>
+      <td>Upgrade hardware components</td>
+      <td>Possible</td>
+      <td>Severe</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Outdated software</td>
+      <td>Update software versions</td>
+      <td>Unlikely</td>
+      <td>Moderate</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Unauthorized access attempts</td>
+      <td>Implement multi-factor authentication</td>
+      <td>Very Unlikely</td>
+      <td>Minor</td>
+    </tr>
+  </table>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
