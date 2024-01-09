@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Risk Assessment Matrix</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://cdn.jsdelivr.net/npm/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
   <style>
     body {
       font-family: Arial, sans-serif;
     }
 
     table {
-      border-collapse: collapse;
-      width: 100%;
+      width: 90%;
+      text-align: center; /* Updated for center alignment */
+      margin: 0 auto; /* Center the table */;
+      border: 1px solid #ddd;
     }
 
     th, td {
-      border: 1px solid #000;
       text-align: center;
       padding: 8px;
     }
@@ -25,91 +27,151 @@
       background-color: #f2f2f2;
     }
 
-    td.low {
-      background-color: #90EE90;
+    td.low, td.low1 {
+      background-color: #8FBC8F; /* DarkSeaGreen */
     }
 
-    /* Light Green */
     td.low-med {
-      background-color: #FFFF99;
+      background-color: #FFFF99; /* LightYellow */
     }
 
-    /* Light Yellow */
-    td.medium {
-      background-color: #FFD700;
+    td.medium, td.medium1 {
+      background-color: #FFD700; /* Gold */
     }
 
-    /* Gold */
-    td.med-hi {
+    td.med-high, td.med-high1 {
       background-color: #FFA07A; /* LightSalmon */
     }
 
-    /* Orange */
-    td.high {
+    td.high, td.high1 {
       background-color: #B22222; /* FireBrick */
     }
 
-    /* OrangeRed */
+    .circle-button {
+      border: none;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: darkslategray;
+      color: #fff;
+      line-height: 30px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .issues {
+      width: 50%;
+      text-align: center; /* Updated for center alignment */
+      margin: 0 auto; /* Center the table */;
+    }
+
+
+    .issues th {
+      margin: 10px;
+      text-align: center; /* Updated for center alignment */
+    }
+
+    .issues tr:nth-child(6), .issues tr:nth-child(5) {
+      background-color: #FFA07A;
+    }
+
+    .issues tr:nth-child(2), .issues tr:nth-child(3) {
+      background-color: #db4545;
+    }
+
+    .issues tr:nth-child(7), .issues tr:nth-child(4) {
+      background-color: #FFD700;
+    }
+
+    .issues tr:nth-child(8) {
+      background-color: #8FBC8F;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px;
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+    }
+
+    .legend span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+
+    .low { background-color: #8FBC8F; } /* DarkSeaGreen */
+    .low-med { background-color: #FFFF99; } /* LightYellow */
+    .medium { background-color: #FFD700; } /* Gold */
+    .med-high { background-color: #FFA07A; } /* LightSalmon */
+    .high { background-color: #B22222; } /* FireBrick */
   </style>
 </head>
 <body>
+
 <h2>Risk Assessment Matrix</h2>
+
 <table>
   <tr>
-    <th rowspan="2" style="width: 30px; height: 50px;">Likelihood</th>
-    <th colspan="5" style="height: 50px;">Severity</th>
+    <th rowspan="2">Likelihood</th>
+    <th colspan="5">Severity</th>
   </tr>
   <tr>
-    <th style="width: 50px; height: 50px;">Negligible</th>
-    <th style="width: 50px; height: 50px;">Minor</th>
-    <th style="width: 50px; height: 50px;">Moderate</th>
-    <th style="width: 50px; height: 50px;">Significant</th>
-    <th style="width: 50px; height: 50px;">Severe</th>
+    <th>Negligible</th>
+    <th>Minor</th>
+    <th>Moderate</th>
+    <th>Significant</th>
+    <th>Severe</th>
   </tr>
   <tr>
-    <td style="height: 50px;">Very Likely</td>
+    <td>Very Likely</td>
     <td class="low"></td>
     <td class="low-med"></td>
     <td class="medium"></td>
-    <td class="med-hi"></td>
-    <td class="high"><button class="circle-button">1</button></td>
+    <td class="med-high"></td>
+    <td class="high1"><button class="circle-button">1</button></td>
   </tr>
   <tr>
-    <td style="height: 50px;">Likely</td>
+    <td>Likely</td>
     <td class="low"></td>
     <td class="low-med"></td>
-    <td class="medium"><button class="circle-button">3</button></td>
-    <td class="med-hi"></td>
-    <td class="high"><button class="circle-button">2</button></td>
+    <td class="medium1"><button class="circle-button">3</button></td>
+    <td class="med-high"></td>
+    <td class="high1"><button class="circle-button">2</button></td>
   </tr>
   <tr>
-    <td style="height: 50px;">Possible</td>
+    <td>Possible</td>
     <td class="low"></td>
     <td class="low-med"></td>
     <td class="medium"></td>
-    <td class="med-hi"><button class="circle-button">4</button></td>
-    <td class="med-hi"><button class="circle-button">5</button></td>
+    <td class="med-high1"><button class="circle-button">4</button></td>
+    <td class="med-high"></td>
   </tr>
   <tr>
-    <td style="height: 50px;">Unlikely</td>
+    <td>Unlikely</td>
     <td class="low"></td>
     <td class="low-med"></td>
-    <td class="medium"><button class="circle-button">6</button></td>
+    <td class="medium1"><button class="circle-button">6</button></td>
     <td class="medium"></td>
-    <td class="med-hi"></td>
+    <td class="med-high1"><button class="circle-button">5</button></td>
   </tr>
   <tr>
-    <td style="height: 50px;">Very Unlikely</td>
+    <td>Very Unlikely</td>
     <td class="low"></td>
-    <td class="low"><button class="circle-button">7</button></td>
+    <td class="low1"><button class="circle-button">7</button></td>
     <td class="low-med"></td>
     <td class="medium"></td>
     <td class="medium"></td>
   </tr>
 </table>
 
-
-<br>
 <div class="legend">
   <div><span class="low"></span> Low Risk</div>
   <div><span class="low-med"></span> Low-Medium Risk</div>
@@ -120,9 +182,8 @@
 
 <button (click)="toggleIssues()" class="see-issues-button">See Issues</button>
 
-
-<div [hidden]="!showIssues" class="issues">
-  <table>
+<div [hidden]="!showIssues">
+  <table class="issues">
     <tr>
       <th>ID</th>
       <th>Description</th>
@@ -163,7 +224,7 @@
       <td>5</td>
       <td>Hardware failures</td>
       <td>Upgrade hardware components</td>
-      <td>Possible</td>
+      <td>Unlikely</td>
       <td>Severe</td>
     </tr>
     <tr>
@@ -183,10 +244,5 @@
   </table>
 </div>
 
-
-<br>
-<br>
-<br>
-<br>
 </body>
 </html>

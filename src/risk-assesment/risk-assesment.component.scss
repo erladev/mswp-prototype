@@ -8,6 +8,11 @@ td:first-child {
   padding: 0 10px; /* Add horizontal padding to the table cells */
 }
 
+h2 {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
 .legend div {
   display: flex;
   align-items: center;
@@ -20,22 +25,44 @@ td:first-child {
   margin-right: 5px;
 }
 
+.low1 {
+  display: flex;
+  justify-content: center;
+  background-color: #8FBC8F; /* DarkSeaGreen */
+}
+
 .low {
   background-color: #8FBC8F; /* DarkSeaGreen */
 }
 
+
 .low-med {
   background-color: #FFFF99;
 }
-
+.medium1 {
+  background-color: #FFD700;
+  display: flex;
+  justify-content: center;
+}
 .medium {
   background-color: #FFD700;
+}
+
+.med-high1 {
+  background-color: #FFA07A; /* LightSalmon */
+  display: flex;
+  justify-content: center;
 }
 
 .med-high {
   background-color: #FFA07A; /* LightSalmon */
 }
 
+.high1 {
+  background-color: #B22222; /* FireBrick */
+  display: flex;
+  justify-content: center;
+}
 .high {
   background-color: #B22222; /* FireBrick */
 }
@@ -52,66 +79,15 @@ td:first-child {
   justify-content: center; /* Center the text horizontally */
   align-items: center; /* Center the text vertically */
 }
-.issues table {
-  border-collapse: collapse;
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid #000; /* Add a border to the table */
-}
 
-.issues th, .issues td {
-  border: 1px solid #000; /* Add a border to the th and td elements */
-  text-align: left;
-  padding: 8px;
-}
 
-.issues table {
-  border-collapse: collapse;
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid #000; /* Add a border to the table */
-}
-
-.issues th, .issues td {
-  border: 1px solid #000; /* Add a border to the th and td elements */
-  text-align: left;
-  padding: 8px;
-}
-
-.issues th, .issues td {
-  border: none; /* Remove the border */
-  text-align: left;
-  padding: 8px;
-}
-
-.issues th {
-  background-color: ghostwhite;
-  border-bottom: 2px solid black; /* Add a solid black border to the bottom */
-}
-
-.issues tr:nth-child(6),
-.issues tr:nth-child(5) {
-  background-color: #FFCCCB
-}
-
-.issues tr:nth-child(2),
-.issues tr:nth-child(3)  {
-  background-color: lightcoral
-}
-
-.issues tr:nth-child(7),
-.issues tr:nth-child(4)  {
-  background-color: #FFD700;
-}
-
-.issues tr:nth-child(8)  {
-  background-color: lightgreen;
-}
 
 .see-issues-button {
+  margin-top: 20px;
+  margin-left: 5%;
   background-color: white;
-  color: black;
-  border: 2px solid darkslategray;;
+  color: #3B82F6;
+  border: 2px solid #3069c6;
   padding: 10px 20px; /* Adjust padding as needed */
   font-size: 16px; /* Adjust font size as needed */
   cursor: pointer; /* Add a pointer cursor on hover */
@@ -119,7 +95,7 @@ td:first-child {
 }
 
 .see-issues-button:hover {
-  background-color: darkslategray;; /* Change background color on hover */
+  background-color: #3069c6;; /* Change background color on hover */
   color: white; /* Change text color on hover */
 }
 

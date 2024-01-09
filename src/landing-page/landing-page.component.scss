@@ -1,0 +1,69 @@
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.scss";
+@import "primeicons/primeicons.css";
+
+.button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.custom-navbar {
+  background-color:  #01032c; /* Replace with your desired color code */
+  /* Add any additional styling here */
+}
+
+.custom-navbar .nav-link {
+  color: white;
+}
+.custom-navbar .navbar-nav .nav-item {
+  margin-right: 25px; /* Adjust the value as needed */
+}
+
+.custom-navbar .nav-link:hover {
+  color: white;
+}
+.button1 {
+  background-color: white;
+  color: #3B82F6;
+  border: 2px solid #3069c6;
+}
+
+.button2 {
+  background-color: #3B82F6;
+  color: white;
+  border: 2px solid #3069c6;
+}
+
+.button2:hover {
+  background-color: black;; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.button1:hover {
+  background-color: black;; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+html{
+  font-size: 1rem;
+  height: 100%
+}
+
+body{
+  font-family: var(--font-family);
+  background-color: var(--surface-b);
+  font-family: var(--font-family);
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
