@@ -12,21 +12,23 @@
     <p style="margin-top: 5%; font-family: Rubik, sans-serif; font-size: small; opacity: 0.6;">You are chatting with CyberComply Assistant</p>
   </div>
 
-
-  <div *ngFor="let questionAnswer of questionAnswers">
-    <div>{{ "Question: " + questionAnswer.question }}</div>
-    <div>{{ "Answer: " + questionAnswer.answer }}</div>
-  </div>
-
-
   <!--Insert Text-->
   <div class="container">
     <textarea #textInput placeholder="Enter question here" style="width: 80%"  class="surface-card shadow-3 p-3 border-1 border-50 border-round"></textarea>
-    <!--<span><button (click)="handleSubmit()" class="button button2">Submit</button></span>-->
   </div>
 
-  <div class="container" style="float:right; margin-top:2%; margin-right: 9.5%">
-    <button (click)="handleSubmit()" class="button button2">Submit</button>
+  <div class="container">
+    <button (click)="handleSubmit()" class="button button2" style="width: 200px">Submit</button>
+  </div>
+
+  <div class="container" style="align-content: center" *ngIf="questionAnswers.length > 0">
+    <p style="width: 80%" >
+      Answer:<br>
+      {{questionAnswers[questionAnswers.length - 1].answer}}
+    </p>
+  </div>
+  <div class="container" *ngIf="questionAnswers.length > 0">
+    <button class="button">Export Answer</button>
   </div>
 
 </div>
